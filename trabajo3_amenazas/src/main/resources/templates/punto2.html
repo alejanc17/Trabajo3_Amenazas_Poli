@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Punto 2</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f8f0fc; color: #4a4a4a; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
+        .caja { background-color: #ffffff; padding: 30px; border-radius: 15px; box-shadow: 0 8px 20px rgba(156, 114, 176, 0.15); margin-bottom: 25px; width: 100%; max-width: 700px; }
+        h2 { color: #9d4edd; border-bottom: 2px solid #e0aaff; padding-bottom: 10px; margin-top: 0; }
+        ul { list-style-type: none; padding: 0; }
+        li { background-color: #fdf8ff; margin: 8px 0; padding: 12px; border-radius: 8px; border-left: 5px solid #c77dff; }
+        .boton-volver { background-color: #e0aaff; color: #3c096c; text-decoration: none; padding: 12px 25px; border-radius: 10px; font-weight: bold; transition: 0.3s; margin-top: 10px; }
+        .boton-volver:hover { background-color: #c77dff; color: white; }
+    </style>
+</head>
+<body>
+<div class="caja">
+    <h2>Resultados del Stack (ListIterator)</h2>
+    <ul><li th:each="item : ${resultadosStack}" th:text="${item}"></li></ul>
+</div>
+<div class="caja">
+    <h2>Resultados del Deque (Iterator)</h2>
+    <ul><li th:each="item : ${resultadosDeque}" th:text="${item}"></li></ul>
+</div>
+<a href="/" class="boton-volver">⬅ Volver al menú principal</a>
+</body>
+</html>

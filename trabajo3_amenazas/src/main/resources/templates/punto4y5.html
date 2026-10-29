@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Puntos 4 y 5</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f8f0fc; color: #4a4a4a; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .caja { background-color: #ffffff; padding: 40px; border-radius: 15px; box-shadow: 0 8px 20px rgba(156, 114, 176, 0.15); width: 100%; max-width: 500px; text-align: center; }
+        h2 { color: #9d4edd; border-bottom: 2px solid #e0aaff; padding-bottom: 10px; margin-top: 0; }
+        p { font-size: 1.1em; color: #555; background-color: #fdf8ff; padding: 10px; border-radius: 8px; }
+        .resultado { color: #c77dff; font-size: 2em; font-weight: bold; margin: 20px 0; }
+        .boton-volver { background-color: #e0aaff; color: #3c096c; text-decoration: none; padding: 12px 25px; border-radius: 10px; font-weight: bold; transition: 0.3s; display: inline-block; margin-top: 10px; }
+        .boton-volver:hover { background-color: #c77dff; color: white; }
+    </style>
+</head>
+<body>
+<div class="caja">
+    <h2>Suma Total (Interface Function)</h2>
+    <p><strong>Objeto evaluado:</strong> <span th:text="${objeto.nombre}"></span></p>
+    <p><strong>Valores en su Stack:</strong> <span th:text="${objeto.conteo}"></span></p>
+
+    <div class="resultado">Total: <span th:text="${total}"></span></div>
+
+    <a href="/" class="boton-volver">⬅ Volver al menú principal</a>
+</div>
+</body>
+</html>

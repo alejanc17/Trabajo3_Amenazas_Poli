@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Punto 3</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f8f0fc; color: #4a4a4a; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; height: 90vh; justify-content: center; margin: 0; }
+        .caja { background-color: #ffffff; padding: 30px; border-radius: 15px; box-shadow: 0 8px 20px rgba(156, 114, 176, 0.15); width: 100%; max-width: 700px; text-align: center; }
+        h2 { color: #9d4edd; border-bottom: 2px solid #e0aaff; padding-bottom: 10px; margin-top: 0; }
+        ul { list-style-type: none; padding: 0; text-align: left; }
+        li { background-color: #fdf8ff; margin: 8px 0; padding: 12px; border-radius: 8px; border-left: 5px solid #c77dff; font-weight: bold; }
+        .boton-volver { background-color: #e0aaff; color: #3c096c; text-decoration: none; padding: 12px 25px; border-radius: 10px; font-weight: bold; transition: 0.3s; margin-top: 20px; display: inline-block; }
+        .boton-volver:hover { background-color: #c77dff; color: white; }
+    </style>
+</head>
+<body>
+<div class="caja">
+    <h2>Filtrado Funcional: Solo Amenazas MALWARE</h2>
+    <ul>
+        <li th:each="a : ${amenazas}" th:text="${a.nombre + ' | Tipo: ' + a.tipo + ' | Cat: ' + a.categoria}"></li>
+    </ul>
+    <a href="/" class="boton-volver">⬅ Volver al menú principal</a>
+</div>
+</body>
+</html>
